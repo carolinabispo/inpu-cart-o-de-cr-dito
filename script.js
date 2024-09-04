@@ -1,7 +1,16 @@
+const formatarNumeroCartao = (value) =>{
+  value = value.replace(/\D/g, '');
+
+  return value.replace(/(\d{4})(?=\d)/g, '$1 ');
+
+}
+
+
 const mostrarTexto = () => {
     const numeroDigitado = document.getElementById("numero-digitado").value;
 
-    document.getElementById("numero-cartao").innerHTML = numeroDigitado; // MOSRAR NUMERO DO CARTAO
+    // document.getElementById("numero-cartao").innerHTML = numeroDigitado; // MOSRAR NUMERO DO CARTAO
+    document.getElementById("numero-cartao").innerHTML = formatarNumeroCartao(numeroDigitado); // MOSRAR NUMERO DO CARTAO
 
     const nomeCliente = document.getElementById("nome-cartao").value;
 
@@ -15,6 +24,9 @@ const mostrarTexto = () => {
 
     document.getElementById("vencimento-ano").innerHTML =  vencimentoAno
 
+    const verificacao = document.getElementById("div-oculta").value
+
+    document.getElementById("num-verificacao").innerHTML =  verificacao
 
 };
 
@@ -49,3 +61,6 @@ const showHide = (id) => {
 
   mostrar(div);
 }
+
+
+
