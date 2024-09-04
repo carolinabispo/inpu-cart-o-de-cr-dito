@@ -17,44 +17,76 @@
     <div class="main">
         <div class="cartao-conteiner">
             <div class="icone-cartao"><img src="./assets/brand.png" alt=""></div>
-            <div class="numero-cartao" id="numero-cartao">numero cartao</div>
-            <div class="dados-clientes">
-                <p >Nome do cliente</p>
-            <span id="nome-cliente"></span>
-                <p >Vencimento</p>
-                <span id="vencimento-mes"></span> / <span id="vencimento-ano"></span>
+            <div class="numero-cartao" id="numero-cartao"></div>
+            <div class="dados">
+                <ul class="dados-clientes">
+                    <li>Nome do cliente</li>
+                    <li>Vencimento</li>
+                </ul>
+                <div class="teste">
+                    <ul class="dados-ii">
+                        <li><span id="nome-cliente"></span></li>
+                        <li><span id="vencimento-mes"></span> / <span id="vencimento-ano"></span</li>
+                    </ul>
+                    
+                </div>
+                <!-- <p>Nome do cliente</p>
+                <span id="nome-cliente"></span>
+                <p>Vencimento</p>
+                <span id="vencimento-mes"></span> / <span id="vencimento-ano"></span> -->
             </div>
             <!-- <div id="nome-cliente">Nome cliente</div>
             <div id="vencimento">Vencimento</div> -->
         </div>
+        <!-- <div class="cartao-back">
+            <div class="icone-cartao"><img src="./assets/brand.png" alt=""></div>
 
+        </div> -->
+
+        <div id="back-cartao">
+            <div class="linha-cartao">
+
+            </div>
+            <div class="verificacao" id="num-verificacao">
+                verificacao
+            </div>
+            <div class="icone-cartao-back"><img src="./assets/Icon.png" alt=""></div>
+        </div>
 
         <div class="div-form">
+            <div>
+                <h1>Digite os dados do seu cartão</h1>
+            </div>
             <form id="form">
                 <label>Número do cartão</label>
                 <input type="text" id="numero-digitado" name="numero-cartao">
                 <label>Nome impresso no cartão</label>
                 <input type="text" id="nome-cartao" name="nome-cartao">
                 <label>Validade</label>
-                <select name="mes" id="mes">
-                    <option>mes</option>
-                    <option>01</option>
-                    <option>02</option>
-                    <option>03</option>
-                    <option>04</option>
-                    <option>05</option>
-                    <option>06</option>
-                    <option>07</option>
-                    <option>08</option>
-                    <option>09</option>
-                    <option>10</option>
-                    <option>11</option>
-                    <option>12</option>
-                </select>
-                <select name="ano" id="ano"></select>
+                <div class="select">
+
+                    <select name="mes" id="mes">
+                        <option>mes</option>
+                        <option>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                        <option>04</option>
+                        <option>05</option>
+                        <option>06</option>
+                        <option>07</option>
+                        <option>08</option>
+                        <option>09</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                    <select name="ano" id="ano"></select>
+                </div>
                 <label>Código de verificação
                 </label>
-                <input type="text" id="verificacao" name="verificacao">
+                <!-- <input type="text" id="verificacao" name="verificacao"> -->
+                <input id="div-oculta" type="text" onclick="showHide('back-cartao')">
+
             </form>
         </div>
     </div>

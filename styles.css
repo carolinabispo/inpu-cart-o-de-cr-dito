@@ -7,8 +7,9 @@
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 100px;
+  flex-wrap: wrap;
 }
 
 .cartao-conteiner {
@@ -19,10 +20,10 @@
   width: 400px;
   height: 250px;
   border-radius: 15px;
+  position: relative;
 }
 
 .div-form {
-  background-color: aquamarine;
   width: 500px;
 }
 
@@ -34,23 +35,146 @@
 }
 
 #numero-cartao {
-  width: 300px;
-  margin-left: 2em;
-  margin-right: 2em;
+  width: 100%;
+  height: 2em;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 2.5em;
+  position: absolute;
+  color: #f9fafb;
 }
 
-.dados-clientes{
-    
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+.dados {
+  margin-top: 7.5em;
+  /* display: flex;
+    justify-content: space-between; */
 }
 
+.dados-clientes {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin-right: 1em;
+  gap: 6em;
+}
 
-#nome-cliente{
+.teste {
+  margin-top: 1em;
+  width: 100%;
+  height: 2em;
+}
+.dados-ii {
+  list-style-type: none;
+  display: flex;
+  margin-right: 1em;
+  justify-content: space-around;
+  gap: 6em;
+}
 
+ul {
+  list-style-type: none;
+}
+
+.linha-cartao {
+  background-color: #a9a9a9;
+  width: 100%;
+  height: 3em;
+  margin-top: 3em;
+}
+
+.verificacao {
+  width: 5em;
+  height: 3em;
+  position: absolute;
+  bottom: 80px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+}
+
+#back-cartao {
+  display: none;
+  font-family: "Nunito Sans";
+  font-weight: bold;
+  background-color: #101010;
+  color: #dcdcdc;
+  width: 400px;
+  height: 250px;
+  border-radius: 15px;
+  position: relative; 
+}
+
+.icone-cartao-back {
+  position: absolute;
+  bottom: 10px; 
+  left: 30px; }
+
+.div-form {
+  width: 250px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  height: 2.5em;
+  width: 100%;
+  border: 2px solid #d3d3d3;
+  border-radius: 4px;
+  background-color: #f9fafb;
+  outline: none;
+}
+
+label {
+  font-family: "Nunito Sans";
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.select {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+select {
+  width: 8em;
+  height: 2.5em;
+  border: 2px solid #d3d3d3;
+  border-radius: 4px;
+  background-color: #f9fafb;
+  outline: none;
+}
+
+h1 {
+  font-family: "Nunito Sans";
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column; /* Alinha os itens verticalmente */
+    gap: 20px; /* Espaçamento entre o cartão e o formulário */
+  }
+
+  .cartao-conteiner {
+    width: 100%; 
+    height: auto; 
+  }
+
+  .div-form {
+    width: 100%; 
+  }
+
+  .icone-cartao-back {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .verificacao {
+    font-size: 18px; 
+  }
 }
